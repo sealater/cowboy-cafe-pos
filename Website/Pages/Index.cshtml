@@ -1,0 +1,53 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<h1>Cowboy Cafe</h1>
+<p>We at Cowboy Cafe are proud to bring you authentic trail meals from the American West. Shake off the dust on your boots and sake your thirst with one of our old-fashioned hand-jerked sodas. Dip your Pan de Campo into a bowl of beans. Or conquer the the mighty Texas Triple Burger! You’ve had a hard ride - so take it easy with us.</p>
+
+<h2>Entrees</h2>
+
+@foreach (Entree item in Menu.Entrees())
+{
+    <div class="menu-item">
+        <p style="font-weight: bold">@item.ToString()</p>
+        <p>@($"{item.Price:c}") | @item.Calories Calories</p>
+    </div>
+}
+
+<h2>Sides</h2>
+
+@foreach (Side item in Menu.Sides())
+{
+    <div class="menu-item">
+        <p style="font-weight: bold">@item.ToString()</p>
+        @{ item.Size = Size.Small; }
+        <p>Small: @($"{item.Price:c}") | @item.Calories Calories</p>
+        @{ item.Size = Size.Medium; }
+        <p>Medium: @($"{item.Price:c}") | @item.Calories Calories</p>
+        @{ item.Size = Size.Large; }
+        <p>Large: @($"{item.Price:c}") | @item.Calories Calories</p>
+    </div>
+}
+
+<h2>Drinks</h2>
+
+@foreach (Drink item in Menu.Drinks())
+{
+    <div class="menu-item">
+        <p style="font-weight: bold">@item.ToString()</p>
+        @{ item.Size = Size.Small; }
+        <p>Small: @($"{item.Price:c}") | @item.Calories Calories</p>
+        @{ item.Size = Size.Medium; }
+        <p>Medium: @($"{item.Price:c}") | @item.Calories Calories</p>
+        @{ item.Size = Size.Large; }
+        <p>Large: @($"{item.Price:c}") | @item.Calories Calories</p>
+    </div>
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>

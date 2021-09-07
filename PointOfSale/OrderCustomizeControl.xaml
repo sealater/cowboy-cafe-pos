@@ -1,0 +1,78 @@
+﻿<UserControl x:Class="PointOfSale.OrderCustomizeControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PointOfSale"
+             mc:Ignorable="d" 
+             d:DesignHeight="787.5" d:DesignWidth="1400">
+
+    <UserControl.Resources>
+        <local:EnumMatchToBooleanConverter x:Key="enumConverter"/>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Name="ControlPanel">
+            <TextBlock FontSize="20" Foreground="#FFFAFAFA" FontFamily="Rockwell" Margin="16,0,0,8">Modifiers</TextBlock>
+
+            <CheckBox IsChecked="{Binding Path=Bread}" Loaded="CollapseIfNull" FontSize="18" FontFamily="Rockwell" Background="#FFFAFAFA" BorderBrush="#FF426A79" Foreground="#FFFAFAFA" Margin="16,4,8,4" VerticalAlignment="Center">Bread</CheckBox>
+
+            <CheckBox IsChecked="{Binding Path=Bun}" Loaded="CollapseIfNull" FontSize="18" FontFamily="Rockwell" Background="#FFFAFAFA" BorderBrush="#FF426A79" Foreground="#FFFAFAFA" Margin="16,4,8,4" VerticalAlignment="Center">Bun</CheckBox>
+            <CheckBox IsChecked="{Binding Path=Ketchup}" Loaded="CollapseIfNull" FontSize="18" FontFamily="Rockwell" Background="#FFFAFAFA" BorderBrush="#FF426A79" Foreground="#FFFAFAFA" Margin="16,4,8,4" VerticalAlignment="Center">Ketchup</CheckBox>
+            <CheckBox IsChecked="{Binding Path=Mustard}" Loaded="CollapseIfNull" FontSize="18" FontFamily="Rockwell" Background="#FFFAFAFA" BorderBrush="#FF426A79" Foreground="#FFFAFAFA" Margin="16,4,8,4" VerticalAlignment="Center">Mustard</CheckBox>
+            <CheckBox IsChecked="{Binding Path=Pickle}" Loaded="CollapseIfNull" FontSize="18" FontFamily="Rockwell" Background="#FFFAFAFA" BorderBrush="#FF426A79" Foreground="#FFFAFAFA" Margin="16,4,8,4" VerticalAlignment="Center">Pickle</CheckBox>
+            <CheckBox IsChecked="{Binding Path=Cheese}" Loaded="CollapseIfNull" FontSize="18" FontFamily="Rockwell" Background="#FFFAFAFA" BorderBrush="#FF426A79" Foreground="#FFFAFAFA" Margin="16,4,8,4" VerticalAlignment="Center">Cheese</CheckBox>
+            <CheckBox IsChecked="{Binding Path=Tomato}" Loaded="CollapseIfNull" FontSize="18" FontFamily="Rockwell" Background="#FFFAFAFA" BorderBrush="#FF426A79" Foreground="#FFFAFAFA" Margin="16,4,8,4" VerticalAlignment="Center">Tomato</CheckBox>
+            <CheckBox IsChecked="{Binding Path=Lettuce}" Loaded="CollapseIfNull" FontSize="18" FontFamily="Rockwell" Background="#FFFAFAFA" BorderBrush="#FF426A79" Foreground="#FFFAFAFA" Margin="16,4,8,4" VerticalAlignment="Center">Lettuce</CheckBox>
+            <CheckBox IsChecked="{Binding Path=Mayo}" Loaded="CollapseIfNull" FontSize="18" FontFamily="Rockwell" Background="#FFFAFAFA" BorderBrush="#FF426A79" Foreground="#FFFAFAFA" Margin="16,4,8,4" VerticalAlignment="Center">Mayo</CheckBox>
+            <CheckBox IsChecked="{Binding Path=Bacon}" Loaded="CollapseIfNull" FontSize="18" FontFamily="Rockwell" Background="#FFFAFAFA" BorderBrush="#FF426A79" Foreground="#FFFAFAFA" Margin="16,4,8,4" VerticalAlignment="Center">Bacon</CheckBox>
+            <CheckBox IsChecked="{Binding Path=Egg}" Loaded="CollapseIfNull" FontSize="18" FontFamily="Rockwell" Background="#FFFAFAFA" BorderBrush="#FF426A79" Foreground="#FFFAFAFA" Margin="16,4,8,4" VerticalAlignment="Center">Egg</CheckBox>
+
+            <CheckBox IsChecked="{Binding Path=SourCream}" Loaded="CollapseIfNull" FontSize="18" FontFamily="Rockwell" Background="#FFFAFAFA" BorderBrush="#FF426A79" Foreground="#FFFAFAFA" Margin="16,4,8,4" VerticalAlignment="Center">Sour Cream</CheckBox>
+            <CheckBox IsChecked="{Binding Path=GreenOnions}" Loaded="CollapseIfNull" FontSize="18" FontFamily="Rockwell" Background="#FFFAFAFA" BorderBrush="#FF426A79" Foreground="#FFFAFAFA" Margin="16,4,8,4" VerticalAlignment="Center">Green Onions</CheckBox>
+            <CheckBox IsChecked="{Binding Path=TortillaStrips}" Loaded="CollapseIfNull" FontSize="18" FontFamily="Rockwell" Background="#FFFAFAFA" BorderBrush="#FF426A79" Foreground="#FFFAFAFA" Margin="16,4,8,4" VerticalAlignment="Center">Tortilla Strips</CheckBox>
+
+            <CheckBox IsChecked="{Binding Path=Ice}" Loaded="CollapseIfNull" FontSize="18" FontFamily="Rockwell" Background="#FFFAFAFA" BorderBrush="#FF426A79" Foreground="#FFFAFAFA" Margin="16,4,8,4" VerticalAlignment="Center">Ice</CheckBox>
+            <CheckBox IsChecked="{Binding Path=Decaf}" Loaded="CollapseIfNull" FontSize="18" FontFamily="Rockwell" Background="#FFFAFAFA" BorderBrush="#FF426A79" Foreground="#FFFAFAFA" Margin="16,4,8,4" VerticalAlignment="Center">Decaf</CheckBox>
+            <CheckBox IsChecked="{Binding Path=RoomForCream}" Loaded="CollapseIfNull" FontSize="18" FontFamily="Rockwell" Background="#FFFAFAFA" BorderBrush="#FF426A79" Foreground="#FFFAFAFA" Margin="16,4,8,4" VerticalAlignment="Center">Room For Cream</CheckBox>
+
+            <CheckBox IsChecked="{Binding Path=Sweet}" Loaded="CollapseIfNull" FontSize="18" FontFamily="Rockwell" Background="#FFFAFAFA" BorderBrush="#FF426A79" Foreground="#FFFAFAFA" Margin="16,4,8,4" VerticalAlignment="Center">Sweet</CheckBox>
+            <CheckBox IsChecked="{Binding Path=Lemon}" Loaded="CollapseIfNull" FontSize="18" FontFamily="Rockwell" Background="#FFFAFAFA" BorderBrush="#FF426A79" Foreground="#FFFAFAFA" Margin="16,4,8,4" VerticalAlignment="Center">Lemon</CheckBox>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1">
+            <TextBlock FontSize="20" Foreground="#FFFAFAFA" FontFamily="Rockwell" Margin="0,0,0,8">Size and/or Flavor</TextBlock>
+
+
+            <RadioButton Content="Small" GroupName="Size" IsChecked="{Binding Path=Size, Mode=TwoWay,
+                Converter={StaticResource enumConverter}, ConverterParameter=Small}" Loaded="CollapseIfNull" FontFamily="Rockwell" BorderBrush="#FF426A79" Background="#FFFAFAFA" Foreground="#FFFAFAFA" FontSize="18" Margin="0,4,0,4"/>
+
+            <RadioButton Content="Medium" GroupName="Size" IsChecked="{Binding Path=Size, Mode=TwoWay,
+                Converter={StaticResource enumConverter}, ConverterParameter=Medium}" Loaded="CollapseIfNull" FontFamily="Rockwell" BorderBrush="#FF426A79" Background="#FFFAFAFA" Foreground="#FFFAFAFA" FontSize="18" Margin="0,4,0,4"/>
+
+            <RadioButton Content="Large" GroupName="Size" IsChecked="{Binding Path=Size, Mode=TwoWay,
+                Converter={StaticResource enumConverter}, ConverterParameter=Large}" Loaded="CollapseIfNull" FontFamily="Rockwell" BorderBrush="#FF426A79" Background="#FFFAFAFA" Foreground="#FFFAFAFA" FontSize="18" Margin="0,4,0,4"/>
+
+            <RadioButton Content="Cream Soda" GroupName="Flavor" IsChecked="{Binding Path=Flavor, Mode=TwoWay,
+                Converter={StaticResource enumConverter}, ConverterParameter=CreamSoda}" Loaded="CollapseIfNull" Grid.ColumnSpan="2" FontFamily="Rockwell" BorderBrush="#FF426A79" Background="#FFFAFAFA" Foreground="#FFFAFAFA" FontSize="18" Margin="0,16,0,4"/>
+
+            <RadioButton Content="Orange Soda" GroupName="Flavor" IsChecked="{Binding Path=Flavor, Mode=TwoWay,
+                Converter={StaticResource enumConverter}, ConverterParameter=OrangeSoda}" Loaded="CollapseIfNull" FontFamily="Rockwell" BorderBrush="#FF426A79" Background="#FFFAFAFA" Foreground="#FFFAFAFA" FontSize="18" Margin="0,4,0,4"/>
+
+            <RadioButton Content="Sarsparilla" GroupName="Flavor" IsChecked="{Binding Path=Flavor, Mode=TwoWay,
+                Converter={StaticResource enumConverter}, ConverterParameter=Sarsparilla}" Loaded="CollapseIfNull" FontFamily="Rockwell" BorderBrush="#FF426A79" Background="#FFFAFAFA" Foreground="#FFFAFAFA" FontSize="18" Margin="0,4,0,4"/>
+
+            <RadioButton Content="Birch Beer" GroupName="Flavor" IsChecked="{Binding Path=Flavor, Mode=TwoWay,
+                Converter={StaticResource enumConverter}, ConverterParameter=BirchBeer}" Loaded="CollapseIfNull" FontFamily="Rockwell" BorderBrush="#FF426A79" Background="#FFFAFAFA" Foreground="#FFFAFAFA" FontSize="18" Margin="0,4,0,4"/>
+
+            <RadioButton Content="Root Beer" GroupName="Flavor" IsChecked="{Binding Path=Flavor, Mode=TwoWay,
+                Converter={StaticResource enumConverter}, ConverterParameter=RootBeer}" Loaded="CollapseIfNull" FontFamily="Rockwell" BorderBrush="#FF426A79" Background="#FFFAFAFA" Foreground="#FFFAFAFA" FontSize="18" Margin="0,4,0,4"/>
+
+        </StackPanel>
+    </Grid>
+</UserControl>
